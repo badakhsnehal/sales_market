@@ -1,0 +1,45 @@
+
+for JAR
+#!/bin/bash
+# Variables
+PROJECT_NAME="sales-market"
+BUILD_ID=$(echo $BUILD_NUMBER)
+TIMESTAMP=$(date +%Y%m%d%H%M%S)
+VERSION_DIR="$WORKSPACE/versions"
+JAR_FILE="$WORKSPACE/target/sales-market-1.0-SNAPSHOT.jar"
+NEW_JAR_FILE="${PROJECT_NAME}-${BUILD_ID}-${TIMESTAMP}.jar"
+
+# Create version directory if not exists
+mkdir -p $VERSION_DIR
+
+# Check if JAR file exists and rename + copy
+if [ -f "$JAR_FILE" ]; then
+    cp "$JAR_FILE" "$VERSION_DIR/$NEW_JAR_FILE"
+    echo "✅ Build artifact versioned as $NEW_JAR_FILE"
+else
+    echo "❌ Build artifact not found!"
+    exit 1
+fi
+ 
+FOR VAR
+#!/bin/bash
+# Variables
+PROJECT_NAME="vprofile"
+BUILD_ID=$(echo $BUILD_NUMBER)
+TIMESTAMP=$(date +%Y%m%d%H%M%S)
+VERSION_DIR="$WORKSPACE/versions"
+WAR_FILE="$WORKSPACE/target/vprofile-v2.war"   # name inside repo
+NEW_WAR_FILE="${PROJECT_NAME}-${BUILD_ID}-${TIMESTAMP}.war"
+
+# Create version directory if not exists
+mkdir -p $VERSION_DIR
+
+# Check if WAR file exists and rename + copy
+if [ -f "$WAR_FILE" ]; then
+    cp "$WAR_FILE" "$VERSION_DIR/$NEW_WAR_FILE"
+    echo "WAR file versioned as $NEW_WAR_FILE"
+else
+    echo "WAR file not found!"
+    exit 1
+fi
+
