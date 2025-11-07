@@ -1,5 +1,8 @@
+POST BUILD ACTION ->A.A
+-> ent (versions/*.jar)
 
 for JAR
+
 #!/bin/bash
 # Variables
 PROJECT_NAME="sales-market"
