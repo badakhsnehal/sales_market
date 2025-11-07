@@ -1,2 +1,11 @@
 H/5 * * * *
 (time)
+
+email
+Field	Value
+SMTP Server	smtp.gmail.com
+Use SMTP Authentication	✅
+User Name	snehalbadakh2004@gmail.com
+Password	<paste your 16-character app password>
+Use SSL	✅
+SMTP Port	465
