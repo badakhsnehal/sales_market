@@ -2,6 +2,7 @@ H/5 * * * *
 (time)
 
 email
+go mange jenk Sys for this setup
 Field	Value
 SMTP Server	smtp.gmail.com
 Use SMTP Authentication	✅
@@ -9,3 +10,9 @@ User Name	snehalbadakh2004@gmail.com
 Password	<paste your 16-character app password>
 Use SSL	✅
 SMTP Port	465
+
+
+● Configure the Git repository in the "Source Code Management" section.
+● In the "Build" step, invoke the top-level Maven target (e.g.GOAl, clean install). for Q2 clean package
+
+● Add a "Post-build Action" to archive the artifacts (e.g., target/*.war)
